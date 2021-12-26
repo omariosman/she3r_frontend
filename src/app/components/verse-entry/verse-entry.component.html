@@ -1,0 +1,7 @@
+<button (click)="get_random_verse()">بيت عشوائي</button>
+<p>{{random_verse.part_one}}</p>
+<input type="text" [(ngModel)]="user_answer" />
+<button (click)="check_answer()">تأكد من الإجابة</button>
+<p *ngIf="answer_flag">إجابة صحيحة</p>
+<p *ngIf="!answer_flag">إجابة خاطئة</p>
+
