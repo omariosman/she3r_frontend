@@ -1,0 +1,100 @@
+* {
+    direction: rtl;
+    font-family: 'DroidArabicKufiRegular';
+}
+
+.main_heading {
+    font-family: 'DroidArabicKufiRegular';
+    text-align: center;
+    text-decoration: underline;
+    color: #524d4d;
+    font-size: 40px;
+
+}
+
+.main_section {
+    text-align: center;
+}
+.get_random_verse_button {
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+
+
+.verse_placeholder {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.user_answer {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.right_answer, .wrong_answer {
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px auto auto auto;
+    max-width: 200px;
+    font-size: 20px;
+    
+
+}
+
+.right_answer{
+    border: 10px solid #04AA6D;
+
+}
+
+
+.wrong_answer{
+    border: 10px solid #f06565;
+}
+
+.input_and_button_check {
+    margin-top: 20px;
+}
+
+.check_answer_button {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.right_wrong_answer{
+    
+    text-align: center;
+    
+}
+
+
+.btn-outline-secondary{
+    height: 50px;
+}
+
+.input_plus_button {
+    margin: auto;
+    margin-top:30px;
+    width: 400px;
+    
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

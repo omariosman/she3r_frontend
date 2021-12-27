@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+body {
+    padding-top: 100px;
+    padding-right: 30px;
+    font-family: 'DroidArabicKufiRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+
+}
+
+
+
+@font-face {
+    font-family: "DroidArabicKufiRegular";
+    src: local("DroidArabicKufiRegular"), url(./assets/fonts/DroidKufi-Regular.ttf) format("truetype");
+}
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+@import "~material-icons/iconfont/material-icons.css";

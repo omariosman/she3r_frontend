@@ -1,7 +1,26 @@
-<button (click)="get_random_verse()">بيت عشوائي</button>
-<p>{{random_verse.part_one}}</p>
-<input type="text" [(ngModel)]="user_answer" />
-<button (click)="check_answer()">تأكد من الإجابة</button>
-<p *ngIf="answer_flag">إجابة صحيحة</p>
-<p *ngIf="!answer_flag">إجابة خاطئة</p>
+<h1 class="main_heading">في حب لغتنا العربية</h1>
+
+<section class="main_section">
+    <button class="get_random_verse_button" color="primary" (click)="get_random_verse()">بيت عشوائي</button>
+    <div>
+        <p class="first_part verse_placeholder">{{random_verse.part_one}}</p>
+        &nbsp;&nbsp;
+        <span class="user_answer">{{user_answer}}</span>
+        
+    </div>
+    <div class="input-group mb-3 input_plus_button">
+        <input type="text" class="form-control" [(ngModel)]="user_answer" placeholder="أدخل الإجابة هنا ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="check_answer()">تأكد من الإجابة</button>
+        </div>
+      </div> 
+    <div class="right_wrong_answer">
+      
+        <p class="fade-in right_answer" *ngIf="answer_flag==1">إجابة صحيحة</p>
+        <p class="fade-in wrong_answer" *ngIf="answer_flag==2">إجابة خاطئة</p>
+
+  
+    </div>
+</section>
+
 

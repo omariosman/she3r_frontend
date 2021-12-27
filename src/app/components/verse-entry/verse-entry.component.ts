@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VerseEntryService } from 'src/app/services/verse-entry.service';
+import {MatIconModule} from '@angular/material/icon'
 
 @Component({
   selector: 'app-verse-entry',
@@ -8,7 +9,7 @@ import { VerseEntryService } from 'src/app/services/verse-entry.service';
 })
 export class VerseEntryComponent implements OnInit {
   random_verse = {part_one: "", part_two: "", poet:""};
-  answer_flag: any;
+  answer_flag: number = 0;
   user_answer: any;
 
   constructor(private verseEntryService: VerseEntryService) { }
@@ -17,6 +18,8 @@ export class VerseEntryComponent implements OnInit {
   }
 
   get_random_verse(){
+    this.answer_flag = 0;
+    this.user_answer = "";
     this.verseEntryService.get_random_verse().subscribe(verse => {
       this.random_verse = verse;
     })
@@ -24,9 +27,9 @@ export class VerseEntryComponent implements OnInit {
 
   check_answer(){
     if (this.random_verse.part_two == this.user_answer){
-      this.answer_flag = true;
+      this.answer_flag = 1;
     } else {
-      this.answer_flag = false;
+      this.answer_flag = 2;
     }
 
 
